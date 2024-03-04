@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+   <head>
+        <meta charset="utf-8">
+        <title>JS COURS #4</title>
+   </head>
+    <body>
+        <label for="scriptSelect">Liste des exercices :</label>
+        <select id="scriptSelect">
+            <option value="">Choisissez un exercice</option>
+            <option value="exo1.js">Exercice 1</option>
+            <option value="exo2.js">Exercice 2</option>
+            <option value="exo3.js">Exercice 3</option>
+            <option value="exo4.js">Exercice 4</option>
+            <option value="exo5.js">Exercice 5</option>
+            <option value="exo5 bis.js">Exercice 5bis</option>
+            <option value="exo6.js">Exercice 6</option>
+            <option value="exo7.js">Exercice 7</option>
+            <option value="exo8.js">Exercice 8</option>
+            <option value="exo9.js">Exercice 9</option>
+        </select>
+
+        <script>
+            document.getElementById("scriptSelect").addEventListener("change", function() {
+                let selectedScript = this.value;
+                // Chargez le script sélectionné
+                let scriptElement = document.createElement("script");
+                scriptElement.src = selectedScript;
+                document.body.appendChild(scriptElement);
+            });
+        </script>
+    </body>
+</html>
+
